@@ -1,6 +1,9 @@
 const FileConroller = require('../controllers/fileController');
 
 function rest(app) {
+    app.get('/',(req,res)=>{
+        console.log("Hello guys");
+    })
     app.get('/files/:uuid',FileConroller().Download);
     app.get('/files/download/:uuid',FileConroller().Dow);
     app.post('/api/files',FileConroller().FileSubmit);
