@@ -5,8 +5,6 @@ const app = express();
 const PORT = process.env.PORT;
 const db = require('./config/db');
 const router = require('./routes/web');
-const bodyParser = require('body-parser');
-
 app.use(express.json());
 app.use(express.static('public'));
 app.set('view engine','ejs');
