@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT;
-const db = require('../backend/config/db');
+const db = require('./config/db');
 const router = require('./routes/web');
 const bodyParser = require('body-parser');
 
