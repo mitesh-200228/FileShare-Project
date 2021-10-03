@@ -100,24 +100,10 @@ function rest() {
       sgMail
         .send(msg)
         .then(() => {
-          console.log("Sent!!");
+          res.status(200).json({message:"Mail Sent!"})
         }).catch((error) => {
           console.error(error);
         });
-
-
-      // sendMail({
-      //   from: emailFrom,
-      //   to: emailTo,
-      //   subject: 'FileShare By Mitesh Bediya',
-      //   text: `${emailFrom} shared a file with you`,
-      //   html: require('../services/emailTemplates')({
-      //     emailFrom: emailFrom,
-      //     downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`,
-      //     size: parseInt(file.size / 1000) + 'KB',
-      //     expires: '24 hours'
-      //   })
-      // });
     }
   }
 }
