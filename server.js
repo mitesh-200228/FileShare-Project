@@ -5,10 +5,7 @@ const app = express();
 const PORT = process.env.PORT;
 const db = require('./config/db');
 const cors = require('cors');
-const corsOptions = {
-    origin:process.env.ALLOWED_CLIENTS.split(','),
-};
-app.use(cors(corsOptions));
+app.use(cors(["http://localhost:3000","https://mitesh-200228.github.io/fileshare-frontend","https://mitesh-200228.github.io/fileshare-frontend/","https://mitesh-200228.github.io"]));
 db();
 const router = require('./routes/web');
 app.use(express.json());
